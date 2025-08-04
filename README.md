@@ -17,13 +17,12 @@ A simple and clean Android Calculator application built using **Kotlin**. This w
 - **IDE:** Android Studio
 - **Min SDK:** 21
 - **Target SDK:** 34
-- **Libraries:** ViewBinding (optional if used)
 
 ## 💡 How to Run
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/YourUsername/CalculatorApp.git
+   git clone https://github.com/HilV5114/Calculator
 Open the project in Android Studio.
 
 Connect your Android device or emulator.
