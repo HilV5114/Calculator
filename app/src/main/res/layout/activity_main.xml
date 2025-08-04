@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:padding="16dp">
+
+    <!-- 1) Header: expression + result -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:paddingBottom="8dp">
+
+    </LinearLayout>
+
+    <!-- 2) Spacer: takes all extra space to push grid down -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="187dp"
+        android:layout_weight="1" />
+
+    <!-- 3) Button grid: wraps its content height -->
+    <TextView
+        android:id="@+id/tvExpression"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textColor="#B0B0B0"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:alignmentMode="alignMargins"
+        android:useDefaultMargins="true"
+        android:gravity="center">
+
+        <!-- Row 1 -->
+        <com.example.calculatorapp.SquareButton
+            style="@style/GridButton"
+            android:text="AC"
+            android:onClick="onClear" />
+        <com.example.calculatorapp.SquareButton
+            style="@style/GridButton"
+            android:text="%"
+            android:onClick="onPercent" />
+        <com.example.calculatorapp.SquareButton
+            style="@style/GridButton"
+            android:text="⌫"
+            android:onClick="onDelete" />
+        <com.example.calculatorapp.SquareButton
+            style="@style/GridButton"
+            android:text="÷"
+            android:onClick="onOperator" />
+
+        <!-- Row 2 -->
+        <com.example.calculatorapp.SquareButton
+            style="@style/GridButton"
+            android:text="7"
+            android:onClick="onNumber" />
+        <com.example.calculatorapp.SquareButton
+            style="@style/GridButton"
+            android:text="8"
+            android:onClick="onNumber" />
+        <com.example.calculatorapp.SquareButton
+            style="@style/GridButton"
+            android:text="9"
+            android:onClick="onNumber" />
+        <com.example.calculatorapp.SquareButton
+            style="@style/GridButton"
+            android:text="×"
+            android:onClick="onOperator" />
+
+        <!-- Row 3 -->
+        <com.example.calculatorapp.SquareButton
+            style="@style/GridButton"
+            android:text="4"
+            android:onClick="onNumber" />
+        <com.example.calculatorapp.SquareButton
+            style="@style/GridButton"
+            android:text="5"
+            android:onClick="onNumber" />
+        <com.example.calculatorapp.SquareButton
+            style="@style/GridButton"
+            android:text="6"
+            android:onClick="onNumber" />
+        <com.example.calculatorapp.SquareButton
+            style="@style/GridButton"
+            android:text="–"
+            android:onClick="onOperator" />
+
+        <!-- Row 4 -->
+        <com.example.calculatorapp.SquareButton
+            style="@style/GridButton"
+            android:text="1"
+            android:onClick="onNumber" />
+        <com.example.calculatorapp.SquareButton
+            style="@style/GridButton"
+            android:text="2"
+            android:onClick="onNumber" />
+        <com.example.calculatorapp.SquareButton
+            style="@style/GridButton"
+            android:text="3"
+            android:onClick="onNumber" />
+        <com.example.calculatorapp.SquareButton
+            style="@style/GridButton"
+            android:text="+"
+            android:onClick="onOperator" />
+
+        <!-- Row 5 -->
+        <com.example.calculatorapp.SquareButton
+            style="@style/GridButton"
+            android:text="00"
+            android:onClick="onNumber" />
+        <com.example.calculatorapp.SquareButton
+            style="@style/GridButton"
+            android:text="0"
+            android:onClick="onNumber" />
+        <com.example.calculatorapp.SquareButton
+            style="@style/GridButton"
+            android:text="."
+            android:onClick="onDecimal" />
+        <com.example.calculatorapp.SquareButton
+            style="@style/GridButton"
+            android:text="="
+            android:onClick="onEqual" />
+
+    </GridLayout>
+</LinearLayout>
